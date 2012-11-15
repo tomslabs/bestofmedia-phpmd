@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>PHP_PMD_BestOfMedia</name>
+ <channel>tomslabs.github.com/pear</channel>
+ <summary>BestOfMedia PHP PMD ruleset</summary>
+ <description>A set of rules matching BestOfMedia symfony 1.4 coding standards</description>
+ <lead>
+  <name>Guillaume Boddaert</name>
+  <user>guibod</user>
+  <email>gboddaert@bestofmedia.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-11-15</date>
+ <time>17:56:42</time>
+ <version>
+  <release>0.0.0</release>
+  <api>1.4.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.php.net/license/">PHP License</license>
+ <notes>
+foo bar
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/data/PHP_PMD" md5sum="11e97a192e31254831ce3bea511e9665" name="resources/rulesets/bestofmedia.xml" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+    <tasks:replace from="@data_dir@" to="data_dir" type="pear-config" />
+    <tasks:replace from="@php_bin@" to="php_bin" type="pear-config" />
+    <tasks:replace from="@bin_dir@" to="bin_dir" type="pear-config" />
+    <tasks:replace from="/usr/bin/env php" to="php_bin" type="pear-config" />
+   </file>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2.3</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0b1</min>
+   </pearinstaller>
+   <package>
+    <name>PHP_PMD</name>
+    <channel>pear.phpmd.org</channel>
+    <min>1.4.0</min>
+    <max>9.9.9</max>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.3.5</release>
+    <api>1.3.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2005-02-26</date>
+   <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
+   <notes>
+* fix Bug #3505: pecl can&apos;t install PDO
+* enhance pear run-tests dramatically
+* fix Bug #3506: pear install should export the pear version into the environment
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.4.0a1</release>
+    <api>1.4.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2005-02-26</date>
+   <license uri="http://www.php.net/license/3_0.txt">PHP License</license>
+   <notes>
+This is a major milestone release for PEAR.  In addition to several killer features,
+every single element of PEAR has a regression test, and so stability is much higher
+than any previous PEAR release, even with the alpha label.
+
+New features in a nutshell:
+* full support for channels
+* pre-download dependency validation
+* new package.xml 2.0 format allows tremendous flexibility while maintaining BC
+* support for optional dependency groups and limited support for sub-packaging
+* robust dependency support
+* full dependency validation on uninstall
+* support for binary PECL packages
+* remote install for hosts with only ftp access - no more problems with
+restricted host installation
+* full support for mirroring
+* support for bundling several packages into a single tarball
+* support for static dependencies on a url-based package
+
+Specific changes from 1.3.5:
+* Implement request #1789: SSL support for xml-rpc and download
+* Everything above here that you just read
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.0a</release>
+    <api>1.4.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2012-11-15</date>
+   <license uri="http://www.php.net/license/">PHP License</license>
+   <notes>
+foo bar
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.0.0</release>
+    <api>1.4.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2012-11-15</date>
+   <license uri="http://www.php.net/license/">PHP License</license>
+   <notes>
+foo bar
+   </notes>
+  </release>
+ </changelog>
+</package>
