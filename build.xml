@@ -30,56 +30,29 @@
     <!--
         Hook method for copying files for the project's xyz archive format.
 
-        Parameters:
-            output.dir      Output directory for the temporary build tree.
-    -->
-    <target name="do-copy-files-for-xyz-archive">
-        <copy todir="${output.dir}/resources/rulesets">
-            <fileset dir="${commons.srcdir.resource}/rulesets" />
-        </copy>
-    </target>
+      Parameters:
+          output.dir      Output directory for the temporary build tree.
+  -->
+  <target name="do-copy-files-for-xyz-archive">
+    <copy todir="${output.dir}/resources/rulesets">
+      <fileset dir="${commons.srcdir.resource}/rulesets" />
+    </copy>
+  </target>
 
-    <!--
-        We use the phar archive after hook to validate that a newly created
-        phar archive works as expected.
+<!-- Hard to explain.
+  The fact is that PHPMD configuration is stored in /usr/share/php/share/PHP_PMD/
+  and that any doc file that we could ship would be put in /usr/share/php/share/PHP_PMD_BestOfMedia/
 
-        Parameters:
-            ${-package:phar:filename}  Name of the created phar file.
-    -->
-    <target name="-phpmd:package:phar:after~hooked" extensionOf="-package:phar:after~hook">
+  The idea is to trick PEAR installer by installing PSEUDO php file in this directory
+  For that we need to alter the manifesto accordingly.
+  -->
+  <target name="-pear:manifest-after~hooked" extensionOf="-pear:manifest-after~hook">
+    <echo message="Patching the crap out of the manifesto" />
 
-        <echo message="Executing:" level="verbose" />
-        <echo message="  ${-package:phar:filename} PHP/PMD/Rule text ${phpmd.rulesets}" level="verbose" />
-
-        <exec dir="${commons.srcdir.php}"
-              executable="${-package:phar:filename}"
-              failonerror="true">
-
-            <arg value="PHP/PMD/Rule" />
-            <arg value="text" />
-            <arg value="${phpmd.rulesets}" />
-        </exec>
-    </target>
-
-    <!--
-        Executes the newly created and installed PEAR version of PHPMD.
-    -->
-    <target name="-phpmd:package:pear:after~hooked" extensionOf="-package:pear:after~hook">
-
-        <echo message="Executing:" level="verbose" />
-        <echo message="  phpmd PHP/PMD/Rule text ${phpmd.rulesets}" level="verbose" />
-
-        <exec dir="${commons.srcdir.php}"
-              executable="${commons.executable.php}"
-              failonerror="true">
-
-            <arg value="-d" />
-            <arg value="include_path=${common-pear-root-dir}" />
-            <arg value="${common-pear-bin-dir}/phpmd" />
-            <arg value="PHP/PMD/Rule" />
-            <arg value="text" />
-            <arg value="${phpmd.rulesets}" />
-        </exec>
-    </target>
+    <exec executable="${commons.executable.php}" failonerror="true">
+      <arg value="src/main/resources/extensions/pear/forceRulesetInsidePHPMD.php" />
+      <arg value="${pear.manifest.file}" />
+    </exec>
+  </target>
 
 </project>

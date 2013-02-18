@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package version="2.0"
-         xmlns="http://pear.php.net/dtd/package-2.0"
-         xmlns:tasks="http://pear.php.net/dtd/tasks-1.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-                             http://pear.php.net/dtd/tasks-1.0.xsd
-                             http://pear.php.net/dtd/package-2.0
-                             http://pear.php.net/dtd/package-2.0.xsd">
-
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0                              http://pear.php.net/dtd/tasks-1.0.xsd                              http://pear.php.net/dtd/package-2.0                              http://pear.php.net/dtd/package-2.0.xsd">
   <name>PHP_PMD_BestOfMedia</name>
-  <channel>tomslabs.github.com</channel>
+  <channel>tomslabs.github.com/pear</channel>
   <summary>PHP Mess Detector, standards for bestofmedia</summary>
   <description>
     The PHP Mess Detector aims to be a simplified PHP port of the well known
@@ -39,24 +31,8 @@
     - Broken package file that causes pyrus to fail during installation fixed.
   </notes>
   <contents>
-    <dir name="/">
-      <dir name="resources">
-        <dir name="rulesets">
-          <file name="bestofmedia.xml" role="data">
-            <tasks:replace from="@package_version@" to="version" type="package-info"/>
-          </file>
-        </dir>
-      </dir>
-
-      <file name="CHANGELOG" role="doc">
-        <tasks:replace from="@package_version@" to="version" type="package-info"/>
-      </file>
-      <file name="LICENSE" role="doc">
-        <tasks:replace from="@package_version@" to="version" type="package-info"/>
-      </file>
-    </dir>
+    <dir name="/"/>
   </contents>
-
   <dependencies>
     <required>
       <php>
@@ -84,9 +60,8 @@
       </extension>
     </required>
   </dependencies>
-
+  <phprelease/>
   <changelog>
-
     <release>
       <date>2010-01-05</date>
       <time>22:16:58</time>
@@ -105,7 +80,6 @@
         - No change for end user.
       </notes>
     </release>
-
     <release>
       <version>
         <release>0.0.0</release>
@@ -121,7 +95,5 @@
         - Initial release of BestOfMedia's PHP Mess Detector coding standards.
       </notes>
     </release>
-
   </changelog>
-
 </package>
