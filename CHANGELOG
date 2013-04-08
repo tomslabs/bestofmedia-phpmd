@@ -1,0 +1,17 @@
+bestofmedia-phpmd-0.0.1 (2013-02-18 17:57:57 +0100)
+===================================================
+
+WORKING ANT/ABC build.
+
+- Added new changelog support Fixed in commit #d0e7bae.
+
+bestofmedia-phpmd-0.0.1 (2013-02-18 17:57:57 +0100)
+===================================================
+
+WORKING ANT/ABC build.
+
+- Added new changelog support Fixed in commit #d0e7bae.
+- WORKING ANT/ABC build. Fixed in commit #924062e.
+- . Fixed in commit #5c66973.
+- Extended PHP_PMD configuration. Fixed in commit #4195081.
+

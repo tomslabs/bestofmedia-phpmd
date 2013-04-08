@@ -7,4 +7,4 @@
     </properties>
 
 
-<body><release version="0.0.1" date="2013-02-18 17:57:57 +0100" description="WORKING ANT/ABC build."/><release version="0.0.1" date="2013-02-18 17:57:57 +0100" description="WORKING ANT/ABC build."><action date="924062e" dev="gboddaert" type="fix">WORKING ANT/ABC build.</action><action date="5c66973" dev="gboddaert" type="fix">.</action><action date="4195081" dev="gboddaert" type="fix">Extended PHP_PMD configuration.</action></release></body></document>
+<body><release version="0.0.1" date="2013-02-18 17:57:57 +0100" description="WORKING ANT/ABC build."><action date="d0e7bae" dev="gboddaert" type="fix">Added new changelog support</action></release><release version="0.0.1" date="2013-02-18 17:57:57 +0100" description="WORKING ANT/ABC build."><action date="d0e7bae" dev="gboddaert" type="fix">Added new changelog support</action><action date="924062e" dev="gboddaert" type="fix">WORKING ANT/ABC build.</action><action date="5c66973" dev="gboddaert" type="fix">.</action><action date="4195081" dev="gboddaert" type="fix">Extended PHP_PMD configuration.</action></release></body></document>
