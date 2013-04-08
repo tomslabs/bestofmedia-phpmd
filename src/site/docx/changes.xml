@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://maven.apache.org/changes/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
+
+    <properties>
+        <title>PHP_CodeSniffer_Standards_BestOfMedia</title>
+        <author email="gboddaert@bestofmedia.com">Guillaume Boddaert</author>
+    </properties>
+
+
+<body><release version="0.0.1" date="2013-02-18 17:57:57 +0100" description="WORKING ANT/ABC build."/><release version="0.0.1" date="2013-02-18 17:57:57 +0100" description="WORKING ANT/ABC build."><action date="924062e" dev="gboddaert" type="fix">WORKING ANT/ABC build.</action><action date="5c66973" dev="gboddaert" type="fix">.</action><action date="4195081" dev="gboddaert" type="fix">Extended PHP_PMD configuration.</action></release></body></document>
